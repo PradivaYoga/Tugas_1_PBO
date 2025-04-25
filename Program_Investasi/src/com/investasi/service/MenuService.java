@@ -1,5 +1,6 @@
 package com.investasi.service;
 
+import com.investasi.app.Main;
 import com.investasi.model.*;
 import com.investasi.util.InputUtil;
 import java.text.NumberFormat;
@@ -27,7 +28,8 @@ public class MenuService {
                     break;
                 case "3":
                     System.out.println("Logout berhasil.\n");
-                    return;
+                    Main.main(null);
+                    break;
                 default:
                     System.out.println("Pilihan tidak valid.\n");
             }
@@ -206,7 +208,8 @@ public class MenuService {
                     System.out.println("Total bunga SBN/bulan: " + formatter.format(totalBunga));
                     break;
                 case "6":
-                    return;
+                    Main.main(null);
+                    break;
                 default:
                     System.out.println("Pilihan tidak valid.");
             }
