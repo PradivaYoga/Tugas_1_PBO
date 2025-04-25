@@ -11,23 +11,32 @@ public class InputUtil {
     }
 
     public static int inputInt(String prompt) {
-        System.out.print(prompt);
-        while (!scanner.hasNextInt()) {
-            System.out.println("Masukkan angka yang valid!");
+        int val;
+        while (true) {
             System.out.print(prompt);
-            scanner.next();
+            if (scanner.hasNextInt()) {
+                val = scanner.nextInt();
+                scanner.nextLine(); 
+                return val;
+            } else {
+                System.out.println("Masukkan angka yang valid!");
+                scanner.nextLine(); 
+            }
         }
-        return scanner.nextInt();
     }
 
     public static double inputDouble(String prompt) {
-        System.out.print(prompt);
-        while (!scanner.hasNextDouble()) {
-            System.out.println("Masukkan angka desimal yang valid!");
+        double val;
+        while (true) {
             System.out.print(prompt);
-            scanner.next();
+            if (scanner.hasNextDouble()) {
+                val = scanner.nextDouble();
+                scanner.nextLine(); 
+                return val;
+            } else {
+                System.out.println("Masukkan angka desimal yang valid!");
+                scanner.nextLine(); 
+            }
         }
-        return scanner.nextDouble();
-
     }
 }
