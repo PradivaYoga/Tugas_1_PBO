@@ -42,7 +42,8 @@ public class MenuService {
             System.out.println("1. Tambah Saham");
             System.out.println("2. Ubah Harga Saham");
             System.out.println("3. Lihat Daftar Saham");
-            System.out.println("4. Kembali");
+            System.out.println("4. Hapus Saham");
+            System.out.println("5. Kembali");
             String pilihan = InputUtil.input("Pilih: ");
 
             switch (pilihan) {
@@ -69,6 +70,16 @@ public class MenuService {
                     else daftarSaham.forEach(s -> System.out.println(s + " | Harga: " + formatter.format(s.getHarga())));
                     break;
                 case "4":
+                    String kodeHapus = InputUtil.input("Masukkan kode saham yang ingin dihapus: ");
+                    Saham sahamHapus = findSahamByKode(kodeHapus);
+                    if (sahamHapus != null) {
+                        daftarSaham.remove(sahamHapus);
+                        System.out.println("Saham berhasil dihapus.");
+                    } else {
+                        System.out.println("Saham tidak ditemukan.");
+                    }
+                    break;
+                case "5":
                     return;
                 default:
                     System.out.println("Pilihan tidak valid.");
@@ -81,7 +92,8 @@ public class MenuService {
             System.out.println("\n-- Menu SBN --");
             System.out.println("1. Tambah SBN");
             System.out.println("2. Lihat Daftar SBN");
-            System.out.println("3. Kembali");
+            System.out.println("3. Hapus SBN");
+            System.out.println("4. Kembali");
             String pilihan = InputUtil.input("Pilih: ");
 
             switch (pilihan) {
@@ -99,6 +111,16 @@ public class MenuService {
                     else daftarSBN.forEach(s -> System.out.println(s + " | Kuota: " + formatter.format(s.getKuotaNasional())));
                     break;
                 case "3":
+                    String namaHapus = InputUtil.input("Masukkan nama SBN yang ingin dihapus: ");
+                    SBN sbnHapus = daftarSBN.stream().filter(s -> s.getNama().equals(namaHapus)).findFirst().orElse(null);
+                    if (sbnHapus != null) {
+                        daftarSBN.remove(sbnHapus);
+                        System.out.println("SBN berhasil dihapus.");
+                    } else {
+                        System.out.println("SBN tidak ditemukan.");
+                    }
+                    break;
+                case "4":
                     return;
                 default:
                     System.out.println("Pilihan tidak valid.");
@@ -215,6 +237,7 @@ public class MenuService {
             }
         }
     }
+
 
     private double getPositiveDouble(String prompt) {
         double val;
