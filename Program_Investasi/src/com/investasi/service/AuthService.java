@@ -16,13 +16,8 @@ public class AuthService {
 
     public void login() {
         System.out.println("\n=== Login ===");
-        String username = InputUtil.input("Username: ").trim();
-        String password = InputUtil.input("Password: ").trim();
-
-        if (username.isEmpty() || password.isEmpty()) {
-            System.out.println("Username atau password tidak boleh kosong.\n");
-            return;
-        }
+        String username = InputUtil.inputNonEmpty("Username: ");
+        String password = InputUtil.inputNonEmpty("Password: ");
 
         for (User user : users) {
             if (user.getUsername().equals(username) && user.getPassword().equals(password)) {

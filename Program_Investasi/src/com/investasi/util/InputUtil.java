@@ -25,6 +25,17 @@ public class InputUtil {
         }
     }
 
+    public static String inputNonEmpty(String prompt) {
+        String value;
+        do {
+            value = input(prompt).trim();
+            if (value.isEmpty()) {
+                System.out.println("Input tidak boleh kosong!");
+            }
+        } while (value.isEmpty());
+        return value;
+    }
+
     public static double inputDouble(String prompt) {
         double val;
         while (true) {
