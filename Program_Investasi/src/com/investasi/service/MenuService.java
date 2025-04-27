@@ -291,7 +291,8 @@ public class MenuService {
     }
 
     private void hapusSBN() {
-        if (daftarSBN.isEmpty()) {
+        if (daftarSBN.isEmpty()) {InputUtil.pause();
+            InputUtil.clearScreen();
             System.out.println("Belum ada SBN yang tersedia.");
         } else {
             lihatDaftarSBN();
