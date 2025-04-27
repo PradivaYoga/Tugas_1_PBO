@@ -154,7 +154,7 @@ public class MenuService {
         }
     }
 
-    // --- Fitur Saham ---
+    // Fitur Saham
     private void tambahSaham() {
         InputUtil.pause();
         InputUtil.clearScreen();
@@ -201,8 +201,8 @@ public class MenuService {
             System.out.println("\n[]==============[]");
             System.out.println("|| DAFTAR SAHAM ||");
             System.out.println("[]==============[]");
-            System.out.println("||");
-            daftarSaham.forEach(s -> System.out.println("|| " + s + " | Harga: " + formatter.format(s.getHarga())));
+            System.out.println("|");
+            daftarSaham.forEach(s -> System.out.println("| " + s + " | Harga: " + formatter.format(s.getHarga())));
         }
         InputUtil.pause();
         InputUtil.clearScreen();
@@ -210,6 +210,8 @@ public class MenuService {
 
     private void hapusSaham() {
         if (daftarSaham.isEmpty()) {
+        InputUtil.pause();
+        InputUtil.clearScreen();
             System.out.println("Belum ada saham yang tersedia.");
         } else {
             lihatDaftarSaham();
@@ -235,8 +237,10 @@ public class MenuService {
         return false;
     } 
 
-    // --- Fitur SBN ---
+    // Fitur SBN
     private void tambahSBN() {
+        InputUtil.pause();
+        InputUtil.clearScreen();
         String nama = InputUtil.input("Masukkan Nama SBN: ");
         while (isNamaSBNExist(nama)) {
             System.out.println("Nama ini sudah ada. Silahkan masukkan nama lain!");
@@ -258,9 +262,17 @@ public class MenuService {
 
     private void lihatDaftarSBN() {
         if (daftarSBN.isEmpty()) {
+            InputUtil.pause();
+            InputUtil.clearScreen();
             System.out.println("Belum ada SBN terdaftar.");
         } else {
-            daftarSBN.forEach(s -> System.out.println(s + " | Kuota: " + formatter.format(s.getKuotaNasional())));
+            InputUtil.pause();
+            InputUtil.clearScreen();
+            System.out.println("\n[]==============[]");
+            System.out.println("||  DAFTAR SBN  ||");
+            System.out.println("[]==============[]");
+            System.out.println("|");
+            daftarSBN.forEach(s -> System.out.println("| " + s + " | Kuota: " + formatter.format(s.getKuotaNasional())));
         }
         InputUtil.pause();
         InputUtil.clearScreen();
@@ -304,7 +316,7 @@ public class MenuService {
     }
 
 
-    // --- Fitur Customer ---
+    // Fitur Customer
     private void beliSaham(Customer customer) {
         if (daftarSaham.isEmpty()) {
             System.out.println("Belum ada saham yang tersedia.");
