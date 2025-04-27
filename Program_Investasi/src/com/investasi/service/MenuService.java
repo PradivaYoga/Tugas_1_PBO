@@ -37,7 +37,9 @@ public class MenuService {
                     logout();
                     return;
                 default:
-                    System.out.println("!! Pilihan tidak valid. !!");
+                    System.out.println("\n[]===========================[]");
+                    System.out.println("|| !! Pilihan tidak valid !! ||");
+                    System.out.println("[]===========================[]");
                     InputUtil.pause();
                     InputUtil.clearScreen();
             }
@@ -74,7 +76,9 @@ public class MenuService {
                     InputUtil.clearScreen();
                     return;
                 default:
-                    System.out.println("!! Pilihan tidak valid. !!");
+                    System.out.println("\n[]===========================[]");
+                    System.out.println("|| !! Pilihan tidak valid !! ||");
+                    System.out.println("[]===========================[]");
                     InputUtil.pause();
                     InputUtil.clearScreen();
             }
@@ -107,7 +111,9 @@ public class MenuService {
                     InputUtil.clearScreen();
                     return;
                 default:
-                    System.out.println("!! Pilihan tidak valid. !!");
+                    System.out.println("\n[]===========================[]");
+                    System.out.println("|| !! Pilihan tidak valid !! ||");
+                    System.out.println("[]===========================[]");
                     InputUtil.pause();
                     InputUtil.clearScreen();
             }
@@ -147,7 +153,9 @@ public class MenuService {
                     logout();
                     return;
                 default:
-                    System.out.println("!! Pilihan tidak valid. !!");
+                    System.out.println("\n[]===========================[]");
+                    System.out.println("|| !! Pilihan tidak valid !! ||");
+                    System.out.println("[]===========================[]");
                     InputUtil.pause();
                     InputUtil.clearScreen();
             }
@@ -173,6 +181,8 @@ public class MenuService {
 
     private void ubahHargaSaham() {
         if (daftarSaham.isEmpty()) {
+            InputUtil.pause();
+            InputUtil.clearScreen();
             System.out.println("Belum ada saham yang tersedia.");
         } else {
             lihatDaftarSaham();
@@ -183,6 +193,8 @@ public class MenuService {
                 saham.setHarga(hargaBaru);
                 System.out.println("Harga saham berhasil diperbarui.");
             } else {
+                InputUtil.pause();
+                InputUtil.clearScreen();
                 System.out.println("Saham tidak ditemukan.");
             }
         }
@@ -289,6 +301,8 @@ public class MenuService {
                 daftarSBN.remove(sbn);
                 System.out.println("SBN berhasil dihapus.");
             } else {
+                InputUtil.pause();
+                InputUtil.clearScreen();
                 System.out.println("SBN tidak ditemukan.");
             }
         }
@@ -319,6 +333,8 @@ public class MenuService {
     // Fitur Customer
     private void beliSaham(Customer customer) {
         if (daftarSaham.isEmpty()) {
+            InputUtil.pause();
+            InputUtil.clearScreen();
             System.out.println("Belum ada saham yang tersedia.");
             InputUtil.pause();
             InputUtil.clearScreen();
@@ -332,6 +348,8 @@ public class MenuService {
             customer.getPortofolio().beliSaham(kode, jumlah);
             System.out.println("Pembelian saham berhasil!");
         } else {
+            InputUtil.pause();
+            InputUtil.clearScreen();
             System.out.println("Saham tidak ditemukan.");
         }
         InputUtil.pause();
@@ -341,6 +359,8 @@ public class MenuService {
     private void jualSaham(Customer customer) {
         Map<String, Integer> sahamDimiliki = customer.getPortofolio().getSahamDimiliki();
         if (sahamDimiliki.isEmpty()) {
+            InputUtil.pause();
+            InputUtil.clearScreen();
             System.out.println("Kamu belum memiliki saham.");
             InputUtil.pause();
             InputUtil.clearScreen();
@@ -353,6 +373,8 @@ public class MenuService {
         } else {
             int jumlah = inputPositiveInt("Masukkan Jumlah Lembar yang ingin dijual: ");
             if (jumlah > sahamDimiliki.get(kode)) {
+                InputUtil.pause();
+                InputUtil.clearScreen();
                 System.out.println("Jumlah lembar melebihi kepemilikan.");
             } else {
                 customer.getPortofolio().jualSaham(kode, jumlah);
@@ -365,6 +387,8 @@ public class MenuService {
 
     private void beliSBN(Customer customer) {
         if (daftarSBN.isEmpty()) {
+            InputUtil.pause();
+            InputUtil.clearScreen();
             System.out.println("Belum ada SBN yang tersedia.");
             InputUtil.pause();
             InputUtil.clearScreen();
@@ -383,6 +407,8 @@ public class MenuService {
                 System.out.println("Pembelian SBN berhasil!");
             }
         } else {
+            InputUtil.pause();
+            InputUtil.clearScreen();
             System.out.println("SBN tidak ditemukan.");
         }
         InputUtil.pause();
@@ -392,6 +418,8 @@ public class MenuService {
     private void simulasiBungaSBN(Customer customer) {
         Map<String, Double> sbnDimiliki = customer.getPortofolio().getSbnDimiliki();
         if (sbnDimiliki.isEmpty()) {
+            InputUtil.pause();
+            InputUtil.clearScreen();
             System.out.println("Kamu belum memiliki SBN.");
         } else {
             sbnDimiliki.forEach((nama, nominal) -> {
@@ -482,10 +510,18 @@ public class MenuService {
             } else if (logout == 2) {
                 InputUtil.pause();
                 InputUtil.clearScreen();
-                System.out.println("Terima kasih telah menggunakan program ini!\n");
+                System.out.println("\n  _______________________________________________");
+                System.out.println("/                                               / |");
+                System.out.println("()~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~() |");
+                System.out.println("[]                                             [] |");
+                System.out.println("[] Terima kasih telah menggunakan program ini! [] |");
+                System.out.println("[]                                             [] /");
+                System.out.println("()~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~()/");
             }
         } else {
-            System.out.println("!! Masukkan Pilihan yang sesuai (1) atau (2) !!");
+            System.out.println("[]=================================================[]");
+            System.out.println("|| !! Masukkan Pilihan yang sesuai (1) atau (2) !! ||");
+            System.out.println("[]=================================================[]");
             InputUtil.pause();
             InputUtil.clearScreen();
             logout();
