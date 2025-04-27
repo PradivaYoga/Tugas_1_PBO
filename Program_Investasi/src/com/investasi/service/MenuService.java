@@ -3,7 +3,6 @@ package com.investasi.service;
 import com.investasi.app.Main;
 import com.investasi.model.*;
 import com.investasi.util.InputUtil;
-
 import java.text.NumberFormat;
 import java.util.*;
 
@@ -15,9 +14,10 @@ public class MenuService {
     public void menuAdmin() {
         while (true) {
             System.out.println("\n=== Menu Admin ===");
-            System.out.println("1. Saham");
-            System.out.println("2. SBN");
-            System.out.println("3. Logout");
+            System.out.println("| 1. Saham       |");
+            System.out.println("| 2. SBN         |");
+            System.out.println("| 3. Logout      |");
+            System.out.println("==================");
 
             String pilihan = InputUtil.input("Pilih menu: ");
 
@@ -34,7 +34,7 @@ public class MenuService {
                     logout();
                     return;
                 default:
-                    System.out.println("Pilihan tidak valid.");
+                    System.out.println("!! Pilihan tidak valid. !!");
                     InputUtil.pause();
                     InputUtil.clearScreen();
             }
@@ -43,12 +43,14 @@ public class MenuService {
 
     private void tampilkanMenuSaham() {
         while (true) {
-            System.out.println("\n-- Kelola Saham --");
-            System.out.println("1. Tambah Saham");
-            System.out.println("2. Ubah Harga Saham");
-            System.out.println("3. Lihat Daftar Saham");
-            System.out.println("4. Hapus Saham");
-            System.out.println("5. Kembali");
+            System.out.println("\n__________________________");
+            System.out.println("|  --- Kelola Saham ---  |");
+            System.out.println("| 1. Tambah Saham        |");
+            System.out.println("| 2. Ubah Harga Saham    |");
+            System.out.println("| 3. Lihat Daftar Saham  |");
+            System.out.println("| 4. Hapus Saham         |");
+            System.out.println("| 5. Kembali             |");
+            System.out.println("==========================");
 
             String pilihan = InputUtil.input("Pilih menu: ");
 
@@ -69,7 +71,7 @@ public class MenuService {
                     InputUtil.clearScreen();
                     return;
                 default:
-                    System.out.println("Pilihan tidak valid.");
+                    System.out.println("!! Pilihan tidak valid. !!");
                     InputUtil.pause();
                     InputUtil.clearScreen();
             }
@@ -78,11 +80,13 @@ public class MenuService {
 
     private void tampilkanMenuSBN() {
         while (true) {
-            System.out.println("\n-- Kelola SBN --");
-            System.out.println("1. Tambah SBN");
-            System.out.println("2. Lihat Daftar SBN");
-            System.out.println("3. Hapus SBN");
-            System.out.println("4. Kembali");
+            System.out.println("\n________________________");
+            System.out.println("|  --- Kelola SBN ---  |");
+            System.out.println("| 1. Tambah SBN        |");
+            System.out.println("| 2. Lihat Daftar SBN  |");
+            System.out.println("| 3. Hapus SBN         |");
+            System.out.println("| 4. Kembali           |");
+            System.out.println("========================");
 
             String pilihan = InputUtil.input("Pilih menu: ");
 
@@ -100,7 +104,7 @@ public class MenuService {
                     InputUtil.clearScreen();
                     return;
                 default:
-                    System.out.println("Pilihan tidak valid.");
+                    System.out.println("!! Pilihan tidak valid. !!");
                     InputUtil.pause();
                     InputUtil.clearScreen();
             }
@@ -109,13 +113,14 @@ public class MenuService {
 
     public void menuCustomer(Customer customer) {
         while (true) {
-            System.out.println("\n=== Menu Customer ===");
-            System.out.println("1. Beli Saham");
-            System.out.println("2. Jual Saham");
-            System.out.println("3. Beli SBN");
-            System.out.println("4. Simulasi Bunga SBN");
-            System.out.println("5. Lihat Portofolio");
-            System.out.println("6. Logout");
+            System.out.println("\n[]===== Menu Customer =====[]");
+            System.out.println("| 1. Beli Saham             |");
+            System.out.println("| 2. Jual Saham             |");
+            System.out.println("| 3. Beli SBN               |");
+            System.out.println("| 4. Simulasi Bunga SBN     |");
+            System.out.println("| 5. Lihat Portofolio       |");
+            System.out.println("| 6. Logout                 |");
+            System.out.println("[]=========================[]");
 
             String pilihan = InputUtil.input("Pilih menu: ");
 
@@ -139,7 +144,7 @@ public class MenuService {
                     logout();
                     return;
                 default:
-                    System.out.println("Pilihan tidak valid.");
+                    System.out.println("!! Pilihan tidak valid. !!");
                     InputUtil.pause();
                     InputUtil.clearScreen();
             }
@@ -148,6 +153,8 @@ public class MenuService {
 
     // --- Fitur Saham ---
     private void tambahSaham() {
+        InputUtil.pause();
+        InputUtil.clearScreen();
         String kode = InputUtil.input("Masukkan Kode Saham: ");
         String nama = InputUtil.input("Masukkan Nama Perusahaan: ");
         double harga = inputPositiveDouble("Masukkan Harga Saham: ");
@@ -178,9 +185,17 @@ public class MenuService {
 
     private void lihatDaftarSaham() {
         if (daftarSaham.isEmpty()) {
+            InputUtil.pause();
+            InputUtil.clearScreen();
             System.out.println("Belum ada saham terdaftar.");
         } else {
-            daftarSaham.forEach(s -> System.out.println(s + " | Harga: " + formatter.format(s.getHarga())));
+            InputUtil.pause();
+            InputUtil.clearScreen();
+            System.out.println("\n[]==============[]");
+            System.out.println("|| DAFTAR SAHAM ||");
+            System.out.println("[]==============[]");
+            System.out.println("||");
+            daftarSaham.forEach(s -> System.out.println("|| " + s + " | Harga: " + formatter.format(s.getHarga())));
         }
         InputUtil.pause();
         InputUtil.clearScreen();
@@ -364,12 +379,12 @@ public class MenuService {
         InputUtil.clearScreen();
     }
 
-    // --- Utility ---
+    // Tambahan
     private double inputPositiveDouble(String prompt) {
         double value;
         do {
             value = InputUtil.inputDouble(prompt);
-            if (value <= 0) System.out.println("Nilai harus lebih dari 0!");
+            if (value <= 0) System.out.println("!! Nilai harus lebih dari 0 !!");
         } while (value <= 0);
         return value;
     }
@@ -378,7 +393,7 @@ public class MenuService {
         int value;
         do {
             value = InputUtil.inputInt(prompt);
-            if (value <= 0) System.out.println("Nilai harus lebih dari 0!");
+            if (value <= 0) System.out.println("!! Nilai harus lebih dari 0 !!");
         } while (value <= 0);
         return value;
     }
@@ -394,10 +409,14 @@ public class MenuService {
     private void logout() {
         System.out.println(" ");
         System.out.println(" ");
+        InputUtil.pause();
+        InputUtil.clearScreen();
         System.out.println("Logout berhasil.\n");
-        System.out.println("==Ingin Mengulangi Program?==");
-        System.out.printf("1. Ya \t|||\t");
-        System.out.printf("2. Tidak\n\n");
+        System.out.println("()~~~~~~~~~~~~~~~~~~~~~~~~~~~()");
+        System.out.println("[] Ingin Mengulangi Program? []");
+        System.out.println("[] 1. Ya                     []");
+        System.out.println("[] 2. Tidak                  []");
+        System.out.println("()~~~~~~~~~~~~~~~~~~~~~~~~~~~()");
         int logout = InputUtil.inputInt("Tolong masukkan angka: ");
         if (logout == 1 || logout == 2) {
             if (logout == 1) {
@@ -405,10 +424,12 @@ public class MenuService {
                 InputUtil.clearScreen();
                 Main.main(null);
             } else if (logout == 2) {
-                System.out.println("Terima Kasih!");
+                InputUtil.pause();
+                InputUtil.clearScreen();
+                System.out.println("Terima kasih telah menggunakan program ini!\n");
             }
         } else {
-            System.out.println("Masukkan Pilihan yang sesuai (1) atau (2)!!");
+            System.out.println("!! Masukkan Pilihan yang sesuai (1) atau (2) !!");
             InputUtil.pause();
             InputUtil.clearScreen();
             logout();

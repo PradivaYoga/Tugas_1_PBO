@@ -17,6 +17,18 @@ public class InputUtil {
         return result;
     }
 
+    public static String authNotEmpty(String prompt) {
+        String value;
+        do {
+            System.out.print(prompt);
+            value = scanner.nextLine().trim();
+            if (value.isEmpty()) {
+                System.out.println("Identitas tidak boleh kosong!");
+            }
+        } while (value.isEmpty());
+        return value;
+    }
+
     public static int inputInt(String prompt) {
         int val;
         while (true) {

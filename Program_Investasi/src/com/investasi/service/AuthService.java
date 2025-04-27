@@ -1,6 +1,5 @@
 package com.investasi.service;
 
-import com.investasi.app.Main;
 import com.investasi.model.*;
 import com.investasi.util.InputUtil;
 import java.util.ArrayList;
@@ -17,18 +16,15 @@ public class AuthService {
 
     public void login() {
         System.out.println("\n=== Login ===");
-        String username = InputUtil.input("Username: ").trim();
-        String password = InputUtil.input("Password: ").trim();
-
-        if (username.isEmpty() || password.isEmpty()) {
-            System.out.println("Username atau password tidak boleh kosong.\n");
-            return;
-        }
+        String username = InputUtil.authNotEmpty("Username: ");
+        String password = InputUtil.authNotEmpty("Password: ");
 
         for (User user : users) {
             if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
                 currentUser = user;
-                System.out.println("Login berhasil sebagai " + username + "\n");
+                InputUtil.pause();
+                InputUtil.clearScreen();
+                System.out.println("<< Login berhasil sebagai " + username + " >>\n");
                 InputUtil.pause();
                 InputUtil.clearScreen();
                 if (user instanceof Admin) {
@@ -40,9 +36,6 @@ public class AuthService {
             }
         }
         System.out.println("Login gagal. Username atau password salah.\n");
-        InputUtil.pause();
-        InputUtil.clearScreen();
-        Main.main(null);
     }
 
     public static User getCurrentUser() {
