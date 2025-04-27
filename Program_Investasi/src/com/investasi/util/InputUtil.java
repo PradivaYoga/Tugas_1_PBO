@@ -6,48 +6,68 @@ public class InputUtil {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static String input(String prompt) {
-        System.out.print(prompt);
-        return scanner.nextLine();
+        String result;
+        do {
+            System.out.print(prompt);
+            result = scanner.nextLine().trim();
+            if (result.isEmpty()) {
+                System.out.println("Input tidak boleh kosong!");
+            }
+        } while (result.isEmpty());
+        return result;
     }
 
     public static int inputInt(String prompt) {
         int val;
         while (true) {
             System.out.print(prompt);
-            if (scanner.hasNextInt()) {
-                val = scanner.nextInt();
-                scanner.nextLine(); 
+            String input = scanner.nextLine().trim();
+            if (input.isEmpty()) {
+                System.out.println("Input tidak boleh kosong!");
+                continue;
+            }
+            try {
+                val = Integer.parseInt(input);
                 return val;
-            } else {
-                System.out.println("Masukkan angka yang valid!");
-                scanner.nextLine(); 
+            } catch (NumberFormatException e) {
+                System.out.println("Masukkan angka bulat yang valid!");
             }
         }
-    }
-
-    public static String inputNonEmpty(String prompt) {
-        String value;
-        do {
-            value = input(prompt).trim();
-            if (value.isEmpty()) {
-                System.out.println("Input tidak boleh kosong!");
-            }
-        } while (value.isEmpty());
-        return value;
     }
 
     public static double inputDouble(String prompt) {
         double val;
         while (true) {
             System.out.print(prompt);
-            if (scanner.hasNextDouble()) {
-                val = scanner.nextDouble();
-                scanner.nextLine(); 
+            String input = scanner.nextLine().trim();
+            if (input.isEmpty()) {
+                System.out.println("Input tidak boleh kosong!");
+                continue;
+            }
+            try {
+                val = Double.parseDouble(input);
                 return val;
-            } else {
+            } catch (NumberFormatException e) {
                 System.out.println("Masukkan angka desimal yang valid!");
-                scanner.nextLine(); 
             }
         }
     }
+
+    public static void clearScreen() {
+        try {
+            if (System.getProperty("os.name").contains("Windows")) {
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            } else {
+                System.out.print("\033[H\033[2J");
+                System.out.flush();
+            }
+        } catch (Exception e) {
+            System.out.println("Gagal clear layar.");
+        }
+    }
+
+    public static void pause() {
+        System.out.println("\nTekan Enter untuk melanjutkan...");
+        scanner.nextLine();
+    }    
 }
