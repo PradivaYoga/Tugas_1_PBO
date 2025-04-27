@@ -4,6 +4,9 @@ import com.investasi.app.Main;
 import com.investasi.model.*;
 import com.investasi.util.InputUtil;
 import java.text.NumberFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.*;
 
 public class MenuService {
@@ -156,6 +159,10 @@ public class MenuService {
         InputUtil.pause();
         InputUtil.clearScreen();
         String kode = InputUtil.input("Masukkan Kode Saham: ");
+        while (isKodeSahamExist(kode)){
+            System.out.println("Kode saham ini sudah ada. Silahkan masukkan kode lain!");
+            kode = InputUtil.input("Masukkan Kode Saham: ");
+        }
         String nama = InputUtil.input("Masukkan Nama Perusahaan: ");
         double harga = inputPositiveDouble("Masukkan Harga Saham: ");
         daftarSaham.add(new Saham(kode, nama, harga));
@@ -219,12 +226,29 @@ public class MenuService {
         InputUtil.clearScreen();
     }
 
+    public static boolean isKodeSahamExist(String kode) {
+        for (Saham saham : daftarSaham) {
+            if (saham.getKode().equalsIgnoreCase(kode)) {
+                return true;
+            }
+        }
+        return false;
+    } 
+
     // --- Fitur SBN ---
     private void tambahSBN() {
         String nama = InputUtil.input("Masukkan Nama SBN: ");
+        while (isNamaSBNExist(nama)) {
+            System.out.println("Nama ini sudah ada. Silahkan masukkan nama lain!");
+            nama = InputUtil.input("Masukkan Nama SBN: ");
+        }
         double bunga = inputPositiveDouble("Masukkan Bunga (%): ");
         int jangkaWaktu = inputPositiveInt("Masukkan Jangka Waktu (bulan): ");
-        String jatuhTempo = InputUtil.input("Masukkan Tanggal Jatuh Tempo: ");
+        String jatuhTempo = InputUtil.input("Masukkan Tanggal Jatuh Tempo (dd/MM/yyyy): ");
+        while (!isValidDate(jatuhTempo)) {
+            System.out.println("Format tanggal salah. Masukkan lagi (dd/MM/yyyy)!");
+            jatuhTempo = InputUtil.input("Masukkan Tanggal Jatuh Tempo (dd/MM/yyyy): ");
+        }
         double kuotaNasional = inputPositiveDouble("Masukkan Kuota Nasional: ");
         daftarSBN.add(new SBN(nama, bunga, jangkaWaktu, jatuhTempo, kuotaNasional));
         System.out.println("SBN berhasil ditambahkan.");
@@ -259,6 +283,26 @@ public class MenuService {
         InputUtil.pause();
         InputUtil.clearScreen();
     }
+
+    public static boolean isNamaSBNExist(String nama) {
+        for (SBN sbn : daftarSBN) {
+            if (sbn.getNama().equalsIgnoreCase(nama)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean isValidDate(String tanggal) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        try {
+            LocalDate.parse(tanggal, formatter);
+            return true;
+        } catch (DateTimeParseException e) {
+            return false;
+        }
+    }
+
 
     // --- Fitur Customer ---
     private void beliSaham(Customer customer) {

@@ -1,5 +1,6 @@
 package com.investasi.service;
 
+import com.investasi.app.Main;
 import com.investasi.model.*;
 import com.investasi.util.InputUtil;
 import java.util.ArrayList;
@@ -36,6 +37,9 @@ public class AuthService {
             }
         }
         System.out.println("Login gagal. Username atau password salah.\n");
+        InputUtil.pause();
+        InputUtil.clearScreen();
+        Main.main(null);
     }
 
     public static User getCurrentUser() {

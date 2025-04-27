@@ -41,7 +41,7 @@ public class SBN {
 
     @Override
     public String toString() {
-        return nama + " | Bunga: " + bunga + "% | Jangka: " + jangkaWaktu + " bulan | Jatuh Tempo: " + tanggalJatuhTempo + " | Kuota: Rp " + kuotaNasional;
+        return nama + " | Bunga: " + bunga + "% | Jangka: " + jangkaWaktu + " bulan | Jatuh Tempo: " + tanggalJatuhTempo;
 
     }
 }
