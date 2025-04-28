@@ -436,29 +436,33 @@ public class MenuService {
     }
 
     private void tampilkanPortofolio(Customer customer) {
-        System.out.println("\n--- Portofolio Saham ---");
+        InputUtil.pause();
+        InputUtil.clearScreen();
+        System.out.println("\n[]==========================[]");
+        System.out.println("[  --- Portofolio Saham ---  ]");
         double totalNilaiSaham = 0;
         for (Map.Entry<String, Integer> entry : customer.getPortofolio().getSahamDimiliki().entrySet()) {
             Saham saham = cariSahamByKode(entry.getKey());
             if (saham != null) {
                 double nilai = saham.getHarga() * entry.getValue();
-                System.out.println(entry.getKey() + ": " + entry.getValue() + " lembar | Nilai: " + formatter.format(nilai));
+                System.out.println("[ " + entry.getKey() + ": " + entry.getValue() + " lembar | Nilai: " + formatter.format(nilai));
                 totalNilaiSaham += nilai;
             }
         }
-        System.out.println("Total nilai saham: " + formatter.format(totalNilaiSaham));
+        System.out.println("[ Total nilai saham: " + formatter.format(totalNilaiSaham));
 
-        System.out.println("\n--- Portofolio SBN ---");
+        System.out.println("\n[]========================[]");
+        System.out.println("[  --- Portofolio SBN ---  ]");
         double totalBungaSBN = 0;
         for (Map.Entry<String, Double> entry : customer.getPortofolio().getSbnDimiliki().entrySet()) {
             SBN sbn = cariSBNByNama(entry.getKey());
             if (sbn != null) {
                 double bungaBulanan = (sbn.getBunga() / 12) * 0.9 * entry.getValue();
-                System.out.println(entry.getKey() + ": " + formatter.format(entry.getValue()) + " | Bunga/Bulan: " + formatter.format(bungaBulanan));
+                System.out.println("[ " + entry.getKey() + ": " + formatter.format(entry.getValue()) + " | Bunga/Bulan: " + formatter.format(bungaBulanan));
                 totalBungaSBN += bungaBulanan;
             }
         }
-        System.out.println("Total bunga SBN per bulan: " + formatter.format(totalBungaSBN));
+        System.out.println("[ Total bunga SBN per bulan: " + formatter.format(totalBungaSBN));
 
         InputUtil.pause();
         InputUtil.clearScreen();
@@ -520,7 +524,7 @@ public class MenuService {
                 System.out.println("()~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~()/");
             }
         } else {
-            System.out.println("[]=================================================[]");
+            System.out.println("\n[]=================================================[]");
             System.out.println("|| !! Masukkan Pilihan yang sesuai (1) atau (2) !! ||");
             System.out.println("[]=================================================[]");
             InputUtil.pause();
