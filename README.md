@@ -4,7 +4,13 @@ Nama Anggota:
 - I Gede Pradiva Yoga Krisnanda (2405551099)
 
 # Daftar Isi:
-
+1. [Program Investasi](#Program-Investasi)
+2. [Diagram UML](#Diagram-UML(Unified-Modeling-Language)-Program-Investasi)
+3. [Alur Program](#Alur-Program-Investasi)
+   1. [Login](#login)
+   2. [Skenario Role Admin](#Skenario-Role-Admin)
+   3. [Skenario Role Customer](#Skenario-Role-Customer)
+   4. [Validasi](#Validasi)
 
 # Program Investasi
   Program Investasi dengan menggunakan Pemrograman Berbasis Objek/ Object Oriented Programming dengan bahasa pemrograman Java adalah suatu program investasi yang dimana terdapat dua produk investasi di dalamnya yakni saham dan SBN (Surat Berharga Negara). Program investasi ini juga dapat diakses oleh dua jenis user, yakni Admin dan Customer. 
@@ -49,5 +55,15 @@ Nama Anggota:
   Di bawah ini merupakan gambar dari diagram UML yang menggambarkan hubungan antar kelas yang menyusun program investasi ini.
   
 
-  
-     
+# Alur Program Investasi
+
+## Login
+
+## Skenario Role Admin
+
+
+## Skenario Role Customer
+
+
+## Validasi
+   
