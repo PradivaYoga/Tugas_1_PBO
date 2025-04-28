@@ -65,6 +65,7 @@ Nama Anggota:
 ## Login
    Pada awal program, pengguna harus melakukan login dengan memasukkan username dan password. Data username dan password ini sudah ditentukan sebelumnya (hardcoded) di dalam program. Saat pengguna mengetikkan identitasnya, sistem akan mencocokkan input tersebut dengan data yang ada. Jika username dan password sesuai, pengguna akan berhasil masuk dan diarahkan ke menu utama sesuai dengan perannya, apakah sebagai admin atau customer. Proses login ini bertujuan untuk membedakan hak akses antara admin dan customer di dalam sistem.
 
+
 ### Login Admin
 
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/2cc436688747c8a6c2cf5205c262203e1fb2eaa7/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Login/Admin/Login%20Admin.png)
@@ -73,6 +74,7 @@ Nama Anggota:
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/2cc436688747c8a6c2cf5205c262203e1fb2eaa7/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Login/Admin/Berhasil%20login%20admin.png)
    Setelah itu akan tampil pesan bahwa kita berhasil login sebagai customer.
 
+
 #### Validasi Login Admin
 
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/2cc436688747c8a6c2cf5205c262203e1fb2eaa7/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Login/Admin/Validasi%20kosong.png)
@@ -80,7 +82,8 @@ Nama Anggota:
 
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/2cc436688747c8a6c2cf5205c262203e1fb2eaa7/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Login/Admin/Validasi%20salah%20identitas.png)
    Jika kita salah memasukkan data identitas, maka akan tampil pesan yang mengatakan kalau identitas yang kita input salah dan program akan meminta untuk input ulang.
-   
+
+
 ### Login Customer
 
 ![image alt]()
@@ -91,9 +94,22 @@ Nama Anggota:
 
 ## Skenario Role Admin
    Setelah berhasil login sebagai admin, pengguna akan diarahkan ke menu khusus admin. Di dalam menu ini admin memiliki tugas untuk mengelola data investasi yang ada dalam sistem. Admin dapat menambahkan saham baru dengan mengisi kode, nama perusahaan, dan harga saham. Admin juga bisa mengubah harga saham yang sudah terdaftar untuk menyesuaikan nilai pasar. Selain itu, admin diberi akses untuk menambahkan produk SBN (Surat Berharga Negara) baru, lengkap dengan bunga, jangka waktu, tanggal jatuh tempo, dan kuota nasional. Setelah selesai, admin juga bisa logout dari sistem.
+
+
+### Validasi Menu Admin
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/b478db250f056a31ef37a4c6e29c4dd69d1ae202/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Milih%20salah%20input.png)
+   Jika kita menginput angka atau huruf selain yang tertera pada Menu Admin maka program akan menampilkan pesan kesalahan.
    
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/b478db250f056a31ef37a4c6e29c4dd69d1ae202/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Validasi%20salah%20input.png)
+   Gambar di atas merupakan pesan kesalahan saat kita salah input, kemudian program akan meminta input ulang.
+
+
 ### Saham
-   Admin memiliki kemampuan untuk menambahkan saham baru dengan cara memasukkan kode saham, nama perusahaan, serta harga saham. Selain itu, admin juga dapat memperbarui harga saham yang sudah ada agar sesuai dengan perubahan nilai pasar. Berikut merupakan skenarionya,
+
+   ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/b478db250f056a31ef37a4c6e29c4dd69d1ae202/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Milih%20pilihan%20saham.png)
+   Jika admin memilih opsi "1. Saham" pada Menu Admin, admin akan dapat menambahkan saham baru dengan cara memasukkan kode saham, nama perusahaan, serta harga saham. Selain itu, admin juga dapat memperbarui harga saham yang sudah ada agar sesuai dengan perubahan nilai pasar. Berikut merupakan skenario-skenarionya,
+
 
 #### Tambah Saham
 
@@ -103,10 +119,12 @@ Nama Anggota:
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/2cc436688747c8a6c2cf5205c262203e1fb2eaa7/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Saham/Menambahkan%20saham/Menambahkan%20saham.png)
    Misal kita menambahkan saham perusahaan Tesla, pertama kita isi kode saham, lalu tambahkan nama perusahaan, dan isi harga sahamnya.
 
+
 ##### Validasi Tambah Saham
 
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/2cc436688747c8a6c2cf5205c262203e1fb2eaa7/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Saham/Menambahkan%20saham/Kode%20saham%20sama.png)
-   Jika kita menginput kode saham yang sama maka akan tampil pesan bahwa kode saham tersebut sudah ada dan program akan meminta untuk input ulang.
+   Jika kita menginput kode saham yang sama, maka akan tampil pesan bahwa kode saham tersebut sudah ada dan program akan meminta untuk input ulang.
+
 
 #### Mengubah Harga Saham
 
@@ -119,14 +137,16 @@ Nama Anggota:
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/2cc436688747c8a6c2cf5205c262203e1fb2eaa7/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Saham/Mengubah%20saham/Mengubah%20harga%20saham.png)
    Misal kita mengubah harga saham Tesla yang tadinya seharga Rp5.000.000 menjadi Rp6.000.000.
 
+
 ##### Validasi Mengubah Harga Saham
 
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/2cc436688747c8a6c2cf5205c262203e1fb2eaa7/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Saham/Mengubah%20saham/Saham%20kosong.png)
-   Jika belum ada saham yang dibuat maka program akan menampilkan pesan bahwa belum ada saham yang tercatat.
+   Jika belum ada saham yang dibuat, maka program akan menampilkan pesan bahwa belum ada saham yang tercatat.
 
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/2cc436688747c8a6c2cf5205c262203e1fb2eaa7/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Saham/Mengubah%20saham/Salah%20input%20nama.png)
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/2cc436688747c8a6c2cf5205c262203e1fb2eaa7/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Saham/Mengubah%20saham/Peringatan%20tidak%20ada%20saham.png)
-   Jika kita salah menginput kode saham maka program akan menampilkan pesan bahwa saham dengan kode tersebut tidak ditemukan.
+   Jika kita salah menginput kode saham, maka program akan menampilkan pesan bahwa saham dengan kode tersebut tidak ditemukan.
+
 
 #### Melihat Daftar Saham
 
@@ -136,10 +156,12 @@ Nama Anggota:
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/2cc436688747c8a6c2cf5205c262203e1fb2eaa7/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Saham/Melihat%20saham/Melihat%20daftar%20saham.png)
    Setelah itu program akan menampilkan keseluruhan daftar saham yang telah dibuat.
 
+
 ##### Validasi Melihat Daftar Saham
 
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/2cc436688747c8a6c2cf5205c262203e1fb2eaa7/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Saham/Melihat%20saham/Saham%20kosong.png)
-   Jika daftar saham kosong maka program akan menampilkan pesan bahwa belum ada saham yang tercatat.
+   Jika daftar saham kosong, maka program akan menampilkan pesan bahwa belum ada saham yang tercatat.
+
 
 #### Menghapus Saham
 
@@ -147,9 +169,15 @@ Nama Anggota:
    Admin dapat memilih opsi "4. Hapus Saham" pada menu Kelola Saham untuk menghapus saham yang telah dibuat.
 
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/2cc436688747c8a6c2cf5205c262203e1fb2eaa7/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Saham/Menghapus%20saham/Menghapus%20saham.png)
-   
+   Lalu admin diminta untuk menginput kode saham yang ingin dihapus, setelah itu program akan menampilkan bahwa saham berhasil dihapus.
 
-![image alt]()
+
+##### Validasi Menghapus Saham
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/b478db250f056a31ef37a4c6e29c4dd69d1ae202/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Saham/Menghapus%20saham/Saham%20kosong.png)
+   Jika tidak ada saham untuk dihapus, maka program akan menampilkan bahwa belum ada saham yang tersedia.
+
+
 
 
 ![image alt]()
