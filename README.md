@@ -72,7 +72,7 @@ Nama Anggota:
    Pertama-tama kita input identitas yaitu, username dan password khusus admin. Gambar di atas merupakan screenshot login page admin yang kita sudah isi dengan username dan password khusus admin.
 
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/2cc436688747c8a6c2cf5205c262203e1fb2eaa7/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Login/Admin/Berhasil%20login%20admin.png)
-   Setelah itu akan tampil pesan bahwa kita berhasil login sebagai customer.
+   Setelah itu akan tampil pesan bahwa kita berhasil login sebagai admin.
 
 
 #### Validasi Login Admin
@@ -86,11 +86,19 @@ Nama Anggota:
 
 ### Login Customer
 
-![image alt]()
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Login/Customer/Login%20user.png)
+   Pertama-tama kita input identitas yaitu, username dan password khusus customer. Gambar di atas merupakan screenshot login page customer yang kita sudah isi dengan username dan password khusus customer.
+   
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Login/Customer/Berhasil%20login%20user.png)
+       Setelah itu akan tampil pesan bahwa kita berhasil login sebagai admin. Pengguna dapat menekan enter untuk melanjutkan program.
 
+#### Validasi Login Customer
 
-![image alt]()
-
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Login/Customer/Validasi%20identitas%20kosong.png)
+   Jika kita melakukan input data identitas yang kosong, akan tampil pesan yang mengatakan kalau kita harus mengisi identitas dengan lengkap dan program akan meminta untuk input ulang.
+   
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Login/Customer/Validasi%20salah%20identitas.png)
+   Jika kita salah memasukkan data identitas, maka akan tampil pesan error, lalu enter dan pengguna harus melakukan input ulang.
 
 ## Skenario Role Admin
    Setelah berhasil login sebagai admin, pengguna akan diarahkan ke menu khusus admin. Di dalam menu ini admin memiliki tugas untuk mengelola data investasi yang ada dalam sistem. Admin dapat menambahkan saham baru dengan mengisi kode, nama perusahaan, dan harga saham. Admin juga bisa mengubah harga saham yang sudah terdaftar untuk menyesuaikan nilai pasar. Selain itu, admin diberi akses untuk menambahkan produk SBN (Surat Berharga Negara) baru, lengkap dengan bunga, jangka waktu, tanggal jatuh tempo, dan kuota nasional. Setelah selesai, admin juga bisa logout dari sistem.
@@ -207,6 +215,88 @@ Nama Anggota:
 
 
 ## Skenario Role Customer
+   Setelah berhasil login sebagai customer(user), pengguna akan diarahkan ke menu khusus customer. Di dalam menu ini customer dapat membeli saham, menjual saham. Selain membeli saham, customer juga dapat membeli SBN, melihat simulasi bunga SBN, melihat portofolio dari produk investasi yang dimiliki. Apabila sudah selesai menggunakan program, customer juga dapat melakukan logout.
+
+### Beli Saham
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Beli%20saham/Milih%20pilihan%201.png)
+   Setelah login sebagai customer, pengguna akan diberi menu pilihan customer. Gambar di atas menunjukkan pengguna memilih pilihan 1, yang mana pilihan 1 merupakan menu untuk melakukan pembelian saham.
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Beli%20saham/Lihat%20daftar%20saham.png)
+   Setelah memilih menu 1 dan menekan enter, maka akan ditampilkan daftar saham terlebih dahulu. Kemudian diarahkan untuk menekan enter untuk langkah selanjutnya.
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Beli%20saham/Berhasil%20beli%20saham.png)
+   Setelah itu pengguna diarahkan untuk memasukkan kode saham, jumlah lembar saham yang akan dibeli. Dan muncul pesan pembelian saham berhasil, lalu pengguna diarahkan untuk menekan enter.
+
+#### Validasi Beli Saham
+
+![image alt]()
 
 
+![image alt]()
+
+
+
+### Jual Saham
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Jual%20saham/Milih%20jual%20saham.png)
+   Gambar di atas menunjukkan pengguna memilih pilihan 2, yang mana pilihan 2 merupakan menu untuk melakukan penjualan saham.
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Jual%20saham/Input%20saham%20yg%20dijual.png)
+   Selanjutnya ditampilkan jumlah saham yang dimiliki. Kemudian pengguna diarahkan untuk memasukkan kode saham dan jumlah lembar saham yang ingin dijual. Pengguna diarahkan untuk menekan enter agar dapat menuju ke langkah selanjutnya.
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Jual%20saham/Penjualan%20berhasil.png)
+   Muncul pesan penjualan saham berhasil yang menandakan saham sudah berhasil terjual. Pengguna dapat menekan enter untuk melanjutkan.
+
+#### Validasi Jual Saham
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Jual%20saham/Pesan%20validasi.png)
+   Apabila pengguna memasukkan kode saham yang tidak sesuai atau jumlah lembar saham yang tidak sesuai, maka akan muncul pesan validasi seperti pada gambar di atas.
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Jual%20saham/Validasi%20penjualan.png)
+   Pengguna juga tidak boleh memberi input kosong, apabila melakukannya maka akan muncul pesan error seperti gambar di atas.
+
+### Beli SBN
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Beli%20SBN/Milih%20beli%20SBN.png)
+   Selanjutnya merupakan skenario apabila customer memilih menu 3 yakni menu untuk membeli saham. Setelah memilih menu 3 customer diarahkan untuk menekan enter.
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Beli%20SBN/Tampilan%20daftar%20SBN.png)
+   Setelah menekan enter, maka sistem clear screen bekerja dan menampilkan daftar SBN apa saja yang tersedia.
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Beli%20SBN/Beli%20SBN.png)
+   Lalu pengguna diarahkan untuk memasukkan nama SBN dan nominal pembelian SBN. Kemudian akan muncul pesan pembelian berhasil dan tekan enter untuk melanjutkan program.
+
+#### Validasi Beli SBN
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Beli%20SBN/Val%20sistem%20klo%20lebih%20dari%20kuota%20nasional.png)
+   Apabila customer melakukan pembelian melewati batas kuota nasional yang tersedia, maka akan muncul pesan error seperti gambar di atas.
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Beli%20SBN/Validasi%20SBN.png)
+   Jika customer tidak memasukkan data apapun, maka akan muncul pesan error bahwa input tidak boleh kosong dan pengguna diarahkan untuk memasukkan data ulang.
+
+### Simulasi Bunga SBN
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Simulasi%20bunga%20SBN/Memilih%20simulasi.png)
+   Customer juga dapat melihat simulasi dari bunga SBN yang dimiliki, dengan cara memilih menu pilihan nomor 4.
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Simulasi%20bunga%20SBN/Tampilan%202.png)
+   Kemudian setelah memilih menu 4, akan ditampilkan perkiraan bunga SBN perbulan. Lalu pengguna diarahkan untuk menekan enter.
+
+### Lihat Portofolio
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Portofolio/Memilih%20portofolio.png)
+   Selain itu, customer juga dapat melihat portofolio dari semua produk investasi yang dimiliki, baik saham maupun SBN.
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Portofolio/Tampilan%20portofolio.png)
+   Kemudian akan ditampilkan portofolio dari customer yang memuat nilai saham yang dimiliki, nama SBN yang dimiliki, simulasi bunga dari masing-masing SBN dan total bunga SBN.
+
+### Validasi Menu Customer
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Milih%20salah%20input.png)
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Validasi%20salah%20input.png)
+   Apabila customer melakukan input yang tidak sesuai, seperti angka yang tidak ada dalam menu ataupun huruf dan char lainnya, maka akan ditampilkan pesan error seperti gambar di atas.
    
+
+
+
