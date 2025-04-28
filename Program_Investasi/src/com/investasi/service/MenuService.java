@@ -375,9 +375,13 @@ public class MenuService {
             InputUtil.clearScreen();
             return;
         }
-        sahamDimiliki.forEach((kode, jumlah) -> System.out.println(kode + " = " + jumlah + " lembar"));
+        InputUtil.pause();
+        InputUtil.clearScreen();
+        sahamDimiliki.forEach((kode, jumlah) -> System.out.println("- " + kode + " = " + jumlah + " lembar"));
         String kode = InputUtil.input("Masukkan Kode Saham yang ingin dijual: ");
         if (!sahamDimiliki.containsKey(kode)) {
+            InputUtil.pause();
+            InputUtil.clearScreen();
             System.out.println("Kamu tidak memiliki saham ini.");
         } else {
             int jumlah = inputPositiveInt("Masukkan Jumlah Lembar yang ingin dijual: ");
@@ -386,6 +390,8 @@ public class MenuService {
                 InputUtil.clearScreen();
                 System.out.println("Jumlah lembar melebihi kepemilikan.");
             } else {
+                InputUtil.pause();
+                InputUtil.clearScreen();
                 customer.getPortofolio().jualSaham(kode, jumlah);
                 System.out.println("Penjualan saham berhasil.");
             }
@@ -434,8 +440,11 @@ public class MenuService {
             sbnDimiliki.forEach((nama, nominal) -> {
                 SBN sbn = cariSBNByNama(nama);
                 if (sbn != null) {
+                    InputUtil.pause();
+                    InputUtil.clearScreen();
                     double bungaBulanan = (sbn.getBunga() / 12) * 0.9 * nominal;
-                    System.out.println(nama + " | Perkiraan bunga per bulan: " + formatter.format(bungaBulanan));
+                    System.out.println("\n============================================================================\n");
+                    System.out.println("| " + nama + " | Perkiraan bunga per bulan: " + formatter.format(bungaBulanan));
                 }
             });
         }
@@ -448,29 +457,31 @@ public class MenuService {
         InputUtil.clearScreen();
         System.out.println("\n[]==========================[]");
         System.out.println("[  --- Portofolio Saham ---  ]");
+        System.out.println("[]==========================[]\n");
         double totalNilaiSaham = 0;
         for (Map.Entry<String, Integer> entry : customer.getPortofolio().getSahamDimiliki().entrySet()) {
             Saham saham = cariSahamByKode(entry.getKey());
             if (saham != null) {
                 double nilai = saham.getHarga() * entry.getValue();
-                System.out.println("[ " + entry.getKey() + ": " + entry.getValue() + " lembar | Nilai: " + formatter.format(nilai));
+                System.out.println("- " + entry.getKey() + ": " + entry.getValue() + " lembar | Nilai: " + formatter.format(nilai));
                 totalNilaiSaham += nilai;
             }
         }
-        System.out.println("[ Total nilai saham: " + formatter.format(totalNilaiSaham));
+        System.out.println(" Total nilai saham: " + formatter.format(totalNilaiSaham));
 
         System.out.println("\n[]========================[]");
         System.out.println("[  --- Portofolio SBN ---  ]");
+        System.out.println("[]========================[]\n");
         double totalBungaSBN = 0;
         for (Map.Entry<String, Double> entry : customer.getPortofolio().getSbnDimiliki().entrySet()) {
             SBN sbn = cariSBNByNama(entry.getKey());
             if (sbn != null) {
                 double bungaBulanan = (sbn.getBunga() / 12) * 0.9 * entry.getValue();
-                System.out.println("[ " + entry.getKey() + ": " + formatter.format(entry.getValue()) + " | Bunga/Bulan: " + formatter.format(bungaBulanan));
+                System.out.println("- " + entry.getKey() + ": " + formatter.format(entry.getValue()) + " | Bunga/Bulan: " + formatter.format(bungaBulanan));
                 totalBungaSBN += bungaBulanan;
             }
         }
-        System.out.println("[ Total bunga SBN per bulan: " + formatter.format(totalBungaSBN));
+        System.out.println(" Total bunga SBN per bulan: " + formatter.format(totalBungaSBN));
 
         InputUtil.pause();
         InputUtil.clearScreen();
