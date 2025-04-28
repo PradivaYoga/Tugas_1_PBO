@@ -37,6 +37,8 @@ public class MenuService {
                     logout();
                     return;
                 default:
+                    InputUtil.pause();
+                    InputUtil.clearScreen();
                     System.out.println("\n[]===========================[]");
                     System.out.println("|| !! Pilihan tidak valid !! ||");
                     System.out.println("[]===========================[]");
@@ -76,6 +78,8 @@ public class MenuService {
                     InputUtil.clearScreen();
                     return;
                 default:
+                    InputUtil.pause();
+                    InputUtil.clearScreen();
                     System.out.println("\n[]===========================[]");
                     System.out.println("|| !! Pilihan tidak valid !! ||");
                     System.out.println("[]===========================[]");
@@ -111,6 +115,8 @@ public class MenuService {
                     InputUtil.clearScreen();
                     return;
                 default:
+                    InputUtil.pause();
+                    InputUtil.clearScreen();
                     System.out.println("\n[]===========================[]");
                     System.out.println("|| !! Pilihan tidak valid !! ||");
                     System.out.println("[]===========================[]");
@@ -153,6 +159,8 @@ public class MenuService {
                     logout();
                     return;
                 default:
+                    InputUtil.pause();
+                    InputUtil.clearScreen();
                     System.out.println("\n[]===========================[]");
                     System.out.println("|| !! Pilihan tidak valid !! ||");
                     System.out.println("[]===========================[]");
