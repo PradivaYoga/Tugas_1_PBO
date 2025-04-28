@@ -5,7 +5,7 @@ Nama Anggota:
 
 # Daftar Isi:
 1. [Program Investasi](#Program-Investasi)
-2. [Diagram UML](#Diagram-UML(Unified-Modeling-Language)-Program-Investasi)
+2. [Diagram UML](#Diagram-UML-Program-Investasi)
 3. [Alur Program](#Alur-Program-Investasi)
    1. [Login](#login)
    2. [Skenario Role Admin](#Skenario-Role-Admin)
@@ -51,7 +51,7 @@ Nama Anggota:
   5. Lihat Portofolio
   6. Logout
 
-# Diagram UML(Unified Modeling Language) Program Investasi
+# Diagram UML Program Investasi
   Di bawah ini merupakan gambar dari diagram UML yang menggambarkan hubungan antar kelas yang menyusun program investasi ini.
   
 
