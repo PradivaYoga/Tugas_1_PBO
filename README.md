@@ -26,10 +26,12 @@ Nama Anggota:
   password: user123
   
   Setelah melakukan login, baik Admin maupun Customer selanjutnya akan ditampilkan menu pilihan sesuai role yang dipilih. Berikut merupakan tampilan menu dari setiap user:
+  
   Tampilan Menu Admin:
   1. Saham
   2. SBN
   3. Logout
+
      Admin>Saham:
      1. Tambah Saham
      2. Ubah Harga Saham
