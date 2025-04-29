@@ -2,6 +2,7 @@
 Nama Anggota:
 - Steven Satyam Wijanarko (2405551036)
 - I Gede Pradiva Yoga Krisnanda (2405551099)
+PBO kelas E
 
 
 # Daftar Isi:
@@ -9,8 +10,18 @@ Nama Anggota:
 2. [Diagram UML](#Diagram-UML-Program-Investasi)
 3. [Alur Program](#Alur-Program-Investasi)
    1. [Login](#login)
+      1. [Login Admin](#Login-Admin)
+      2. [Login Customer](#Login-Customer)
+      3. [Logout](#Logout)
    2. [Skenario Role Admin](#Skenario-Role-Admin)
+      1. [Saham](#Saham)
+      2. [SBN](#SBN)
    3. [Skenario Role Customer](#Skenario-Role-Customer)
+      1. [Beli Saham](#Beli-Saham)
+      2. [Jual Saham](#Jual-Saham)
+      3. [Beli SBN](#Beli-SBN)
+      4. [Simulasi Bunga SBN](#Simulasi-Bunga-SBN)
+      5. [Lihat Portofolio](#Lihat-Portofolio)
 
 
 # Program Investasi
@@ -293,6 +304,7 @@ Nama Anggota:
 ## Skenario Role Customer
    Setelah berhasil login sebagai customer (user), pengguna akan diarahkan ke menu khusus customer. Di dalam menu ini customer dapat membeli saham, menjual saham. Selain membeli saham, customer juga dapat membeli SBN, melihat simulasi bunga SBN, melihat portofolio dari produk investasi yang dimiliki. Apabila sudah selesai menggunakan program, customer juga dapat melakukan logout.
 
+
 ### Beli Saham
 
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Beli%20saham/Milih%20pilihan%201.png)
@@ -304,13 +316,18 @@ Nama Anggota:
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Beli%20saham/Berhasil%20beli%20saham.png)
    Setelah itu pengguna diarahkan untuk memasukkan kode saham, jumlah lembar saham yang akan dibeli. Dan muncul pesan pembelian saham berhasil, lalu pengguna diarahkan untuk menekan enter.
 
+
 #### Validasi Beli Saham
 
-![image alt]()
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/b8bcff20c6ac5d20c74da2657271d2b8e3cc2312/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Beli%20saham/Validasi%20beli%20saham%20kosong.png)
+   Jika saham belum ditambahkan oleh Admin, maka akan muncul pesan seperti gambar di atas yang menunjukkan belum ada saham yang tersedia.
 
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/b8bcff20c6ac5d20c74da2657271d2b8e3cc2312/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Beli%20saham/Input%20nama%20saham%20salah.png)
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/b8bcff20c6ac5d20c74da2657271d2b8e3cc2312/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Beli%20saham/Output%20salah%20nama%20saham.png)
+   Jika user salah menginputkan kode saham, tepat setelah user menekan enter akan ditampilkan bahwa saham tidak ditemukan.
 
-![image alt]()
-
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/b8bcff20c6ac5d20c74da2657271d2b8e3cc2312/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Beli%20saham/Validasi%20beli%20saham.png)
+   Apabila pengguna mengosongkan data akan muncul pesan error dan mengarahkan pengguna untuk input ulang, begitu juga jika pengguna membeli 0 lembar saham akan muncul pesan error.
 
 
 ### Jual Saham
@@ -324,6 +341,7 @@ Nama Anggota:
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Jual%20saham/Penjualan%20berhasil.png)
    Muncul pesan penjualan saham berhasil yang menandakan saham sudah berhasil terjual. Pengguna dapat menekan enter untuk melanjutkan.
 
+
 #### Validasi Jual Saham
 
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Jual%20saham/Pesan%20validasi.png)
@@ -331,6 +349,7 @@ Nama Anggota:
 
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Jual%20saham/Validasi%20penjualan.png)
    Pengguna juga tidak boleh memberi input kosong, apabila melakukannya maka akan muncul pesan error seperti gambar di atas.
+
 
 ### Beli SBN
 
@@ -343,6 +362,7 @@ Nama Anggota:
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Beli%20SBN/Beli%20SBN.png)
    Lalu pengguna diarahkan untuk memasukkan nama SBN dan nominal pembelian SBN. Kemudian akan muncul pesan pembelian berhasil dan tekan enter untuk melanjutkan program.
 
+
 #### Validasi Beli SBN
 
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Beli%20SBN/Val%20sistem%20klo%20lebih%20dari%20kuota%20nasional.png)
@@ -350,6 +370,7 @@ Nama Anggota:
 
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Beli%20SBN/Validasi%20SBN.png)
    Jika customer tidak memasukkan data apapun, maka akan muncul pesan error bahwa input tidak boleh kosong dan pengguna diarahkan untuk memasukkan data ulang.
+
 
 ### Simulasi Bunga SBN
 
@@ -359,6 +380,7 @@ Nama Anggota:
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Simulasi%20bunga%20SBN/Tampilan%202.png)
    Kemudian setelah memilih menu 4, akan ditampilkan perkiraan bunga SBN perbulan. Lalu pengguna diarahkan untuk menekan enter.
 
+
 ### Lihat Portofolio
 
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Portofolio/Memilih%20portofolio.png)
@@ -367,12 +389,15 @@ Nama Anggota:
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Portofolio/Tampilan%20portofolio.png)
    Kemudian akan ditampilkan portofolio dari customer yang memuat nilai saham yang dimiliki, nama SBN yang dimiliki, simulasi bunga dari masing-masing SBN dan total bunga SBN.
 
+
 ### Validasi Menu Customer
 
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Milih%20salah%20input.png)
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Validasi%20salah%20input.png)
    Apabila customer melakukan input yang tidak sesuai, seperti angka yang tidak ada dalam menu ataupun huruf dan char lainnya, maka akan ditampilkan pesan error seperti gambar di atas.
-   
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/b8bcff20c6ac5d20c74da2657271d2b8e3cc2312/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Customer/Validasi%20menu%20customer.png)
+   Selain itu, customer juga tidak boleh memasukkan pilihan kosong, jika melakukannya akan muncul pesan seperti gambar di atas.
 
 
 
