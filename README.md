@@ -95,7 +95,7 @@ Nama Anggota:
    Pertama-tama kita input identitas yaitu, username dan password khusus customer. Gambar di atas merupakan screenshot login page customer yang kita sudah isi dengan username dan password khusus customer.
    
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Login/Customer/Berhasil%20login%20user.png)
-       Setelah itu akan tampil pesan bahwa kita berhasil login sebagai admin. Pengguna dapat menekan enter untuk melanjutkan program.
+       Setelah itu akan tampil pesan bahwa kita berhasil login sebagai user. Pengguna dapat menekan enter untuk melanjutkan program.
 
 #### Validasi Login Customer
 
@@ -107,7 +107,7 @@ Nama Anggota:
 
 
 ## Logout
-   Dalam program investasi ini, logout berarti mengakhiri sesi pengguna yang sedang aktif, baik itu admin maupun customer. Setelah logout, data pengguna yang sedang login akan dihapus dari sistem (dengan mengosongkan currentUser), sehingga pengguna harus login kembali jika ingin mengakses fitur-fitur investasi.
+   Dalam program investasi ini, logout berarti mengakhiri sesi pengguna yang sedang aktif, baik itu admin maupun customer. Setelah logout, data pengguna yang sedang login akan dihapus dari sistem, sehingga pengguna harus login kembali jika ingin mengakses fitur-fitur investasi.
 
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/4119c7208e9567c2932bc7d1fb872d275d7907ab/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Pilih%20logout.png)
    Pengguna dapat memilih "3. Logout" pada Menu Admin maupun Menu Customer jika ingin mengakhiri sesi.
