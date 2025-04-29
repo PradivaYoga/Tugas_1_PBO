@@ -127,8 +127,14 @@ Nama Anggota:
 
 ### Validasi Logout
 
-![image alt]()
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/bb3e5153411538f1cdc51f6b1c4230ec813fe365/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Memilih%20salah%20di%20ulang%20program.png)
+   Jika pengguna menginput selain dari pilihan yang tertera di layar, maka program akan menampilkan error.
 
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/bb3e5153411538f1cdc51f6b1c4230ec813fe365/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Pesan%20error%20ulang%20program.png)
+   Gambar di atas merupakan pesan error yang ditampilkan, kemudian program akan meminta input ulang.
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/bb3e5153411538f1cdc51f6b1c4230ec813fe365/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Validasi%20kosong%20ulang%20program.png)
+   Gambar di atas merupakan pesan error jika pengguna input kosong, kemudian program akan meminta input ulang.
 
 
 ## Skenario Role Admin
