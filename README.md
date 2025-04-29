@@ -3,6 +3,7 @@ Nama Anggota:
 - Steven Satyam Wijanarko (2405551036)
 - I Gede Pradiva Yoga Krisnanda (2405551099)
 
+
 # Daftar Isi:
 1. [Program Investasi](#Program-Investasi)
 2. [Diagram UML](#Diagram-UML-Program-Investasi)
@@ -10,6 +11,7 @@ Nama Anggota:
    1. [Login](#login)
    2. [Skenario Role Admin](#Skenario-Role-Admin)
    3. [Skenario Role Customer](#Skenario-Role-Customer)
+
 
 # Program Investasi
   Program Investasi dengan menggunakan Pemrograman Berbasis Objek/ Object Oriented Programming dengan bahasa pemrograman Java adalah suatu program investasi yang dimana terdapat dua produk investasi di dalamnya yakni saham dan SBN (Surat Berharga Negara). Program investasi ini juga dapat diakses oleh dua jenis user, yakni Admin dan Customer. 
@@ -52,16 +54,19 @@ Nama Anggota:
   5. Lihat Portofolio
   6. Logout
 
+
 # Diagram UML Program Investasi
   Di bawah ini merupakan gambar dari diagram UML yang menggambarkan hubungan antar kelas yang menyusun program investasi ini.
 
   ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/c7f92d0e4639203f2dac8ba92f1aec2b57bf5077/Source%20Images%20Program%20Investasi/UML/UML%20Investasi-Keseluruhan%20Alur.png)
 
   Diagram UML di atas menggambarkan arsitektur dari program investasi ini. Program diawali dari kelas "Main", yang menjalankan metode "main()" untuk memulai aplikasi. Kelas ini menggunakan "AuthService" untuk mengelola proses autentikasi, di mana pengguna dapat login sebagai "Admin" atau "Customer", yang keduanya merupakan turunan dari kelas abstrak "User". Setelah autentikasi berhasil, kendali beralih ke "MenuService", yang menyediakan berbagai menu pilihan untuk mengelola produk investasi tergantung role yang dipilih. Input dari pengguna dikendalikan oleh kelas "InputUtil", yang berfungsi untuk membaca masukan dari terminal. Investasi yang tersedia diwakili oleh kelas "Saham" dan "SBN", masing-masing memiliki atribut seperti "nama", "harga", dan informasi tambahan terkait. Setiap "Customer" memiliki objek "Portofolio", yang berisi data investasi berupa peta nama instrumen ke jumlah unit dan harga beli. Relasi antar kelas menunjukkan bahwa "Main" bergantung pada "AuthService" dan "AuthService" juga bergantung ke "Main", "AuthService" mengelola objek "User", dan "MenuService" berinteraksi dengan hampir ke semua entitas seperti "Customer", "Saham", "SBN", serta "Portofolio" untuk menjalankan operasi program investasi.
-  
+
+
 # Alur Program Investasi
    Program ini adalah program investasi sederhana yang dijalankan lewat terminal. Pertama-tama, pengguna login dengan username dan password yang sudah disediakan. Setelah berhasil login, pengguna akan diarahkan ke menu sesuai dengan perannya, apakah sebagai admin atau customer. Admin bisa menambah saham, mengubah harga saham, dan menambah produk SBN. Sementara customer bisa membeli atau menjual saham, membeli SBN, melakukan simulasi investasi SBN, dan melihat portofolio investasinya. Semua data disimpan langsung di program tanpa database, dan input dari pengguna divalidasi supaya input tidak salah.
-   
+
+
 ## Login
    Pada awal program, pengguna harus melakukan login dengan memasukkan username dan password. Data username dan password ini sudah ditentukan sebelumnya (hardcoded) di dalam program. Saat pengguna mengetikkan identitasnya, sistem akan mencocokkan input tersebut dengan data yang ada. Jika username dan password sesuai, pengguna akan berhasil masuk dan diarahkan ke menu utama sesuai dengan perannya, apakah sebagai admin atau customer. Proses login ini bertujuan untuk membedakan hak akses antara admin dan customer di dalam sistem.
 
@@ -99,6 +104,32 @@ Nama Anggota:
    
 ![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/28a79e9cfa12007979e1f354090cad10361d2e4f/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Login/Customer/Validasi%20salah%20identitas.png)
    Jika kita salah memasukkan data identitas, maka akan tampil pesan error, lalu enter dan pengguna harus melakukan input ulang.
+
+
+## Logout
+   Dalam program investasi ini, logout berarti mengakhiri sesi pengguna yang sedang aktif, baik itu admin maupun customer. Setelah logout, data pengguna yang sedang login akan dihapus dari sistem (dengan mengosongkan currentUser), sehingga pengguna harus login kembali jika ingin mengakses fitur-fitur investasi.
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/4119c7208e9567c2932bc7d1fb872d275d7907ab/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Pilih%20logout.png)
+   Pengguna dapat memilih "3. Logout" pada Menu Admin maupun Menu Customer jika ingin mengakhiri sesi.
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/4119c7208e9567c2932bc7d1fb872d275d7907ab/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Logout.png)
+   Lalu, program akan menanyakan apakah pengguna ingin mengulangi program atau tidak.
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/4119c7208e9567c2932bc7d1fb872d275d7907ab/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Pilih%20ya%20di%20logout.png)
+   Jika pengguna memilih "ya", program akan kembali ke login page dan pengguna dapat memilih role yang ingin di pilih.
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/4119c7208e9567c2932bc7d1fb872d275d7907ab/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Pilih%20tidak%20di%20logout.png)
+   Sebaliknya, jika pengguna memilih "tidak", program akan langsung selesai.
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/4119c7208e9567c2932bc7d1fb872d275d7907ab/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Tampilan%20terimakasih.png)
+   Setelah itu program akan menampilkan pesan "terima kasih" kepada pengguna.
+
+
+### Validasi Logout
+
+![image alt]()
+
+
 
 ## Skenario Role Admin
    Setelah berhasil login sebagai admin, pengguna akan diarahkan ke menu khusus admin. Di dalam menu ini admin memiliki tugas untuk mengelola data investasi yang ada dalam sistem. Admin dapat menambahkan saham baru dengan mengisi kode, nama perusahaan, dan harga saham. Admin juga bisa mengubah harga saham yang sudah terdaftar untuk menyesuaikan nilai pasar. Selain itu, admin diberi akses untuk menambahkan produk SBN (Surat Berharga Negara) baru, lengkap dengan bunga, jangka waktu, tanggal jatuh tempo, dan kuota nasional. Setelah selesai, admin juga bisa logout dari sistem.
@@ -186,36 +217,75 @@ Nama Anggota:
    Jika tidak ada saham untuk dihapus, maka program akan menampilkan bahwa belum ada saham yang tersedia.
 
 
-
-
-![image alt]()
-
-
-![image alt]()
-
-
-![image alt]()
-
-
-![image alt]()
-
-
-![image alt]()
-
-
-![image alt]()
-
-
-![image alt]()
 ### SBN
 
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/4119c7208e9567c2932bc7d1fb872d275d7907ab/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Milih%20pilihan%20SBN.png)
+   Jika admin memilih opsi "2. SBN" pada Menu Admin, admin akan dapat menambah produk SBN (Surat Berharga Negara) baru, dengan melengkapi data seperti tingkat bunga, durasi, tanggal jatuh tempo, serta kuota nasional yang tersedia.
 
 
+#### Tambah SBN
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/4119c7208e9567c2932bc7d1fb872d275d7907ab/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/SBN/Menambah%20SBN/Milih%20tambah%20SBN.png)
+   Admin dapat memilih opsi "1. Tambah SBN" pada menu Kelola SBN untuk menambah SBN (Surat Berharga Negara).
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/4119c7208e9567c2932bc7d1fb872d275d7907ab/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/SBN/Menambah%20SBN/Nambah%20SBN.png)
+   Disini admin akan diminta untuk menginput Nama SBN, persenan bunga, jangka waktu (dalam bulan), tanggal jatuh tempo dengan format dd/mm/yyyy, dan kuota nasionalnya. Setelah itu SBN akan berhasil ditambahkan.
+
+
+##### Validasi Tambah SBN
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/4119c7208e9567c2932bc7d1fb872d275d7907ab/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/SBN/Menambah%20SBN/Nama%20SBN%20tak%20boleh%20sama.png)
+   Jika admin menginput nama SBN yang sama dengan SBN yang sudah ditambah sebelumnya, maka akan ditampilkan pesan error dan program akan meminta input ulang.
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/4119c7208e9567c2932bc7d1fb872d275d7907ab/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/SBN/Menambah%20SBN/Validasi%20SBN.png)
+   Gambar di atas merupakan kumpulan validasi yang terdapat pada opsi Tambah SBN antara lain, persenan bunga yang tidak boleh bernilai 0 maupun dibawah 0, jangka waktu yang harus berupa angka, format jatuh tempo yang harus sesuai, dan input kuota nasional yang tidak boleh kosong.
+
+
+#### Melihat Daftar SBN
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/4119c7208e9567c2932bc7d1fb872d275d7907ab/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/SBN/Lihat%20daftar%20SBN/Memilih%20pilihan%20melihat.png)
+   Admin dapat memilih opsi "2. Lihat Daftar SBN" pada menu Kelola SBN untuk melihat daftar SBN (Surat Berharga Negara).
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/4119c7208e9567c2932bc7d1fb872d275d7907ab/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/SBN/Lihat%20daftar%20SBN/Melihat%20SBN.png)
+   Setelah itu program akan menampilkan daftar SBN yang telah admin tambahkan.
+
+
+##### Validasi Melihat Daftar SBN
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/4119c7208e9567c2932bc7d1fb872d275d7907ab/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/SBN/Lihat%20daftar%20SBN/SBN%20kosong.png)
+   Jika belum ada SBN yang dibuat, maka program akan menampilkan pesan yang menyatakan bahwa belum ada SBN yang terdaftar.
+
+
+#### Menghapus SBN
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/4119c7208e9567c2932bc7d1fb872d275d7907ab/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/SBN/Hapus%20SBN/Memilih%20pilihan%20hapus.png)
+   Admin dapat memilih opsi "3. Hapus SBN" pada menu Kelola SBN untuk menghapus SBN (Surat Berharga Negara).
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/4119c7208e9567c2932bc7d1fb872d275d7907ab/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/SBN/Lihat%20daftar%20SBN/Melihat%20SBN.png)
+   Kemudian, program akan menampilkan daftar SBN yang dapat admin hapus.
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/4119c7208e9567c2932bc7d1fb872d275d7907ab/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/SBN/Hapus%20SBN/Hapus%20SBN.png)
+   Lalu, program akan meminta nama SBN yang ingin dihapus. Setelah itu, SBN akan berhasil dihapus.
+
+
+##### Validasi Menghapus SBN
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/4119c7208e9567c2932bc7d1fb872d275d7907ab/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/SBN/Hapus%20SBN/SBN%20kosong.png)
+   Jika belum ada SBN yang dibuat, maka program akan menampilkan pesan yang menyatakan bahwa belum ada SBN yang tersedia.
+
+
+### Validasi Menu Admin
+
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/b478db250f056a31ef37a4c6e29c4dd69d1ae202/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Milih%20salah%20input.png)
+   Jika kita menginput angka atau huruf selain yang tertera pada Menu Admin maka program akan menampilkan pesan kesalahan.
+   
+![image alt](https://github.com/PradivaYoga/Tugas_1_PBO/blob/b478db250f056a31ef37a4c6e29c4dd69d1ae202/Source%20Images%20Program%20Investasi/SS%20Tugas%201/Admin/Validasi%20salah%20input.png)
+   Gambar di atas merupakan pesan kesalahan saat kita salah input, kemudian program akan meminta input ulang.
 
 
 
 ## Skenario Role Customer
-   Setelah berhasil login sebagai customer(user), pengguna akan diarahkan ke menu khusus customer. Di dalam menu ini customer dapat membeli saham, menjual saham. Selain membeli saham, customer juga dapat membeli SBN, melihat simulasi bunga SBN, melihat portofolio dari produk investasi yang dimiliki. Apabila sudah selesai menggunakan program, customer juga dapat melakukan logout.
+   Setelah berhasil login sebagai customer (user), pengguna akan diarahkan ke menu khusus customer. Di dalam menu ini customer dapat membeli saham, menjual saham. Selain membeli saham, customer juga dapat membeli SBN, melihat simulasi bunga SBN, melihat portofolio dari produk investasi yang dimiliki. Apabila sudah selesai menggunakan program, customer juga dapat melakukan logout.
 
 ### Beli Saham
 
